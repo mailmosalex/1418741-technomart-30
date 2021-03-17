@@ -96,25 +96,18 @@
                     <h3>Перфораторы</h3>
                     <p>Настоящие мужские игрушки</p>
                   </div>
-                  <div class="slider-nav">
-                    <button class="offer-slider-button offer-slider-left"></button>
-                    <button class="offer-slider-button offer-slider-right"></button>
-                  </div>
                   <a class="button slider-button" href="catalog.html">Открыть каталог</a>
                 </li>
-                <!-- Временно отключил для построения сетки
                 <li class="slider-item slider-drill">
                   <div class="slider-title">
                     <h3>Дрели</h3>
                     <p>Соседям на радость!</p>
                   </div>
-                  <div class="slider-nav">
-                    <button class="offer-slider-left"></button>
-                    <button class="offer-slider-right"></button>
-                  </div>
-                  <a class="button" href="catalog.html">Открыть каталог</a>
-                </li> -->
+                  <a class="button slider-button" href="catalog.html">Открыть каталог</a>
+                </li>
               </ul>
+              <button class="offer-slider-button offer-slider-left" onclick="minusSlide()"></button>
+              <button class="offer-slider-button offer-slider-right" onclick="plusSlide()"></button>
             </li>
           </ul>
         </section>
@@ -199,38 +192,32 @@
           <div class="container services-section-display">
             <div class="box-services-list">
               <ul class="services-tabs list-reset">
-                  <li><button class="service-tab" onclick="openService(event, 'delivery')">Доставка</button></li>
-                  <li><button class="service-tab" onclick="openService(event, 'guarantee')">Гарантия</button></li>
-                  <li><button class="service-tab" onclick="openService(event, 'credit')">Кредит</button></li>
+                  <li><button class="service-tab-btn service-btn-active" onclick="openService(event, 'delivery')" id="deliveryOpen">Доставка</button></li>
+                  <li><button class="service-tab-btn" onclick="openService(event, 'guarantee')">Гарантия</button></li>
+                  <li><button class="service-tab-btn" onclick="openService(event, 'credit')">Кредит</button></li>
               </ul>
             </div>
-            <div id="delivery" class="delivery-tab">
+            <div id="delivery" class="service-tab delivery-tab">
               <h2 class="title-secondary title-darkblue">Доставка</h2>
               <p>Мы с удовольствием доставим ваш товар прямо<br>
                 к вашему подъезду совершенно бесплатно! <br>
                 Ведь мы неплохо заработаем, <br>
                 поднимая его на ваш этаж!</p>
             </div>
-
-
-            <!-- Временно отключил для построения сетки
-            <div id="guarantee" class="guarantee-tab">
+            <div id="guarantee" class="service-tab guarantee-tab">
               <h2 class="title-secondary title-darkblue">Гарантия</h2>
               <p>Если купленный у нас товар поломается или заискрит,<br>
                 а также в случае пожара, спровоцированного его<br>
                 возгоранием,  вы всегда можете быть уверены в нашей<br>
                 гарантии. Мы обменяем сгоревший товар на новый.<br>
                 Дом уж восстановите как-нибудь сами.</p>
-              <img src="img/guarantee.png" width="389" height="283" alt="Гарантия">
             </div>
-            <div id="credit" class="credit-tab">
+            <div id="credit" class="service-tab credit-tab">
               <h2 class="title-secondary title-darkblue">Кредит</h2>
               <p>Залезть в долговую яму стало проще!<br>
                 Кредитные консультанты придут вам на помощь.</p>
-              <a class="button" href="#">Отправить заявку</a>
-              <img src="img/credit.png" width="465" height="285" alt="Кредит">
+              <a class="button credit-button" href="#">Отправить заявку</a>
             </div>
-            -->
           </div>
         </section>
         <section class="company-section container">
@@ -250,8 +237,8 @@
             <h2 class="title-secondary">Контакты</h2>
             <p>Вы можете забрать товар сами,<br>
               заехав в наш офис:</p>
-            <a href="#"><img src="img/map.png" width="300" height="158" alt="карта"></a>
-            <a class="button" href="#">Заблудились? Напишите нам!</a>
+            <a class="contacts-map" href=""><img src="img/map.png" width="300" height="158" alt="карта"></a>
+            <a class="button contacts-feedback" href="">Заблудились? Напишите нам!</a>
           </div>
         </section>
     </main>
@@ -290,9 +277,9 @@
           </div>
           <div>
             <ul class="social list-reset">
-              <li><a href="#"><img src="img/icons/icon-vk.svg" alt="Вконтакте"></a></li>
-              <li><a href="#"><img src="img/icons/icon-fb.svg" alt="Фейсбук"></a></li>
-              <li><a href="#"><img src="img/icons/icon-insta.svg" alt="Инстаграм"></a></li>
+              <li><a class="social-vk" href="#"></a></li>
+              <li><a class="social-fb" href="#"></a></li>
+              <li><a class="social-insta" href="#"></a></li>
             </ul>
           </div>
           <div>
@@ -314,8 +301,7 @@
   <!-- Pop-up окно формы обратной связи -->
 
     <section class="pop-up-form">
-      <div></div>
-      <button class="close-button"></button>
+      <button class="close-button close-button-form"></button>
       <form class="contact-form" action="http://echo.htmlacademy.ru" method="post">
         <div class="contact-form-wrapper">
           <div class="contact-form-block">
@@ -342,9 +328,9 @@
   <!-- Pop-up окно карты -->
 
     <section class="pop-up-map">
-      <button class="close-button"></button>
+      <button class="close-button close-button-map" title="Закрыть"></button>
       <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.249385992339!2d30.321431057535726!3d59.93836960626309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1611605041432!5m2!1sru!2sru" width="943" height="449"></iframe>
-    </section> -->
-
+    </section>
+    <script src="js/script.js" type="text/javascript"></script>
   </body>
 </html>

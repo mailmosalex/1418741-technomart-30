@@ -49,9 +49,9 @@
           <a class="phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
-        <div>
-          <a href="#" class="btn-user btn-exit btn-avatar">Равшан Джамшутович</a>
-          <ul class="top-header-user">
+        <div class="top-header-user">
+          <a href="#" class="btn-user btn-exit">Равшан Джамшутович</a>
+          <ul class="user-panel">
             <li><a href="#">Мои заказы</a></li>
             <li></li>
             <li><a href="#">Личный кабинет</a></li>
@@ -86,8 +86,14 @@
                 <li class="button-catalog filter-background">Фильтр:</li>
                 <li class="filter-cost">
                   <h3>Цена:</h3>
-                  <div class="filter-background filter-range">
-                    <input  type="range" min="0" max="30000" step="1" value="50">
+                  <div class="filter-range">
+                    <div class="range-price-controls">
+                      <div class="range-price-scale">
+                        <div class="range-price-bar"></div>
+                      </div>
+                      <button class="range-scale-btn range-min-btn" type="button" title="Уменьшить"></button>
+                      <button class="range-scale-btn range-max-btn" type="button" title="Увеличить"></button>
+                    </div>
                   </div>
                   <div class="filter-cost-row">
                     <input class="filter-background" type="text" value="0">
@@ -97,36 +103,26 @@
                 </li>
                 <li class="filter-products">
                   <h3>Производители:</h3>
-                  <ul>
+                  <ul class="filter-products-brands">
                     <li>
-                      <label>
-                        <input type="checkbox" name="made-bosch" checked>
-                        <span>Bosch</span>
-                      </label>
+                      <input class="filter-input-checkbox" type="checkbox" name="made-bosch" id="filter-bosch" checked>
+                      <label for="filter-bosch">Bosch</label>
                     </li>
                     <li>
-                      <label>
-                        <input type="checkbox" name="made-interskol">
-                        <span>Интерскол</span>
-                      </label>
+                      <input class="filter-input-checkbox" type="checkbox" name="made-interskol" id="filter-interskol">
+                      <label for="filter-interskol">Интерскол</label>
                     </li>
                     <li>
-                      <label>
-                        <input type="checkbox" name="made-makita" checked>
-                        <span>Makita</span>
-                      </label>
+                      <input class="filter-input-checkbox" type="checkbox" name="made-makita" id="filter-makita" checked>
+                      <label for="filter-makita">Makita</label>
                     </li>
                     <li>
-                      <label>
-                        <input type="checkbox" name="made-dewalt">
-                        <span>Dewalt</span>
-                      </label>
+                      <input class="filter-input-checkbox" type="checkbox" name="made-dewalt" id="filter-dewalt">
+                      <label for="filter-dewalt">Dewalt</label>
                     </li>
                     <li>
-                      <label>
-                        <input type="checkbox" name="made-hitachi">
-                        <span>Hitachi</span>
-                      </label>
+                      <input class="filter-input-checkbox" type="checkbox" name="made-hitachi" id="filter-hitachi">
+                      <label for="filter-hitachi">Hitachi</label>
                     </li>
                   </ul>
                 </li>
@@ -134,16 +130,12 @@
                   <h3>Питание:</h3>
                   <ul>
                     <li>
-                      <label>
-                        <input type="radio" name="power" value="battery" checked>
-                        <span>Аккумуляторные</span>
-                      </label>
+                      <input class="filter-input-radio" type="radio" name="power" value="battery" id="filter-battery" checked>
+                      <label for="filter-battery">Аккумуляторные</label>
                     </li>
                     <li>
-                      <label>
-                        <input type="radio" name="power" value="power">
-                        <span>Сетевые</span>
-                      </label>
+                      <input class="filter-input-radio" type="radio" name="power" id="filter-socket" value="socket">
+                      <label for="filter-socket">Сетевые</label>
                     </li>
                   </ul>
                 </li>
@@ -154,12 +146,12 @@
           <section class="catalog-section">
             <ul class="catalog-sorting button-catalog filter-background list-reset">
               <li>Сортировка:</li>
-              <li class=""><a class="sorting-active" href="#">По цене</a></li>
-              <li class="sorting-border" ><a class="sorting-text" href="#">По типу</a></li>
-              <li class="sorting-border"><a class="sorting-text" href="#">По функционалу</a></li>
+              <li><a href="#">По цене</a></li>
+              <li><a href="#">По типу</a></li>
+              <li><a href="#">По функционалу</a></li>
               <li>
-                <a class="sorting-button-up filter-background" href="#"></a>
-                <a class="sorting-button-down filter-background" href="#"></a>
+                <a class="sorting-button filter-background" href="#"></a>
+                <a class="sorting-button sorting-button-down filter-background" href="#"></a>
               </li>
             </ul>
             <ul class="products-shop products-shop-table list-reset">
@@ -273,7 +265,7 @@
               </li>
             </ul>
             <ul class="button-catalog pagination list-reset">
-              <li><a class="pagination-link page-active" href="#">1</a></li>
+              <li><a class="pagination-link" href="#">1</a></li>
               <li><a class="pagination-link" href="#">2</a></li>
               <li><a class="pagination-link" href="#">3</a></li>
               <li><a class="pagination-link page-next" href="#">Следующая</a></li>
@@ -325,9 +317,9 @@
           </div>
           <div>
             <ul class="social list-reset">
-              <li><a href="#"><img src="img/icons/icon-vk.svg" alt="Вконтакте"></a></li>
-              <li><a href="#"><img src="img/icons/icon-fb.svg" alt="Фейсбук"></a></li>
-              <li><a href="#"><img src="img/icons/icon-insta.svg" alt="Инстаграм"></a></li>
+              <li><a class="social-vk" href="#"></a></li>
+              <li><a class="social-fb" href="#"></a></li>
+              <li><a class="social-insta" href="#"></a></li>
             </ul>
           </div>
           <div>
