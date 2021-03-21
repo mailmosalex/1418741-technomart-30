@@ -223,7 +223,7 @@
         <section class="company-section container">
           <div class="about-company">
             <h2 class="title-secondary">КОМПАНИЯ «Техномарт»</h2>
-            <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+            <p class="about-company-p">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
             <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
               Техномарт работает со многими транспортными компаниями:</p>
             <ul class="partners-list list-reset">
@@ -238,7 +238,7 @@
             <p>Вы можете забрать товар сами,<br>
               заехав в наш офис:</p>
             <a class="contacts-map" href=""><img src="img/map.png" width="300" height="158" alt="карта"></a>
-            <a class="button contacts-feedback" href="">Заблудились? Напишите нам!</a>
+            <a class="button contacts-feedback" href="contact.html">Заблудились? Напишите нам!</a>
           </div>
         </section>
     </main>
@@ -300,7 +300,7 @@
 
   <!-- Pop-up окно формы обратной связи -->
 
-    <section class="pop-up-form">
+    <section class="pop-up pop-up-form">
       <button class="close-button close-button-form"></button>
       <form class="contact-form" action="http://echo.htmlacademy.ru" method="post">
         <div class="contact-form-wrapper">
@@ -325,12 +325,30 @@
       </form>
     </section>
 
+    <!-- Pop-up окно оформить заказ -->
+
+    <section class="pop-up pop-up-cart-add">
+      <button class="close-button close-button-add"></button>
+      <form class="cart-add-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="cart-add-title">
+          <img src="img/icons/icon-mark.svg" alt="">
+          <p>Товар добавлен в корзину</p>
+        </div>
+        <div class="form-bottom">
+          <button class="button add-order-button" type="submit">Оформить заказ</button>
+          <button class="button resume-buy-button" type="submit">Продолжить покупки</button>
+        </div>
+      </form>
+    </section>
+
+
   <!-- Pop-up окно карты -->
 
-    <section class="pop-up-map">
+    <section class="pop-up pop-up-map">
       <button class="close-button close-button-map" title="Закрыть"></button>
       <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.249385992339!2d30.321431057535726!3d59.93836960626309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1611605041432!5m2!1sru!2sru" width="943" height="449"></iframe>
     </section>
+
     <script src="js/script.js" type="text/javascript"></script>
   </body>
 </html>

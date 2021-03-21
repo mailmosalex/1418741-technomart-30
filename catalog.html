@@ -81,7 +81,7 @@
         <h2 class="title-secondary title-darkblue title-background">Перфораторы</h2>
         <div class="main-catalog-table">
           <section class="filter-section">
-            <form class="form" action="/" method="POST">
+            <form class="form" action="https://echo.htmlacademy.ru" method="POST">
               <ul class="filter list-reset">
                 <li class="button-catalog filter-background">Фильтр:</li>
                 <li class="filter-cost">
@@ -105,23 +105,23 @@
                   <h3>Производители:</h3>
                   <ul class="filter-products-brands">
                     <li>
-                      <input class="filter-input-checkbox" type="checkbox" name="made-bosch" id="filter-bosch" checked>
+                      <input class="filter-input filter-input-checkbox" type="checkbox" name="made-bosch" id="filter-bosch" checked>
                       <label for="filter-bosch">Bosch</label>
                     </li>
                     <li>
-                      <input class="filter-input-checkbox" type="checkbox" name="made-interskol" id="filter-interskol">
+                      <input class="filter-input filter-input-checkbox" type="checkbox" name="made-interskol" id="filter-interskol">
                       <label for="filter-interskol">Интерскол</label>
                     </li>
                     <li>
-                      <input class="filter-input-checkbox" type="checkbox" name="made-makita" id="filter-makita" checked>
+                      <input class="filter-input filter-input-checkbox" type="checkbox" name="made-makita" id="filter-makita" checked>
                       <label for="filter-makita">Makita</label>
                     </li>
                     <li>
-                      <input class="filter-input-checkbox" type="checkbox" name="made-dewalt" id="filter-dewalt">
+                      <input class="filter-input filter-input-checkbox" type="checkbox" name="made-dewalt" id="filter-dewalt">
                       <label for="filter-dewalt">Dewalt</label>
                     </li>
                     <li>
-                      <input class="filter-input-checkbox" type="checkbox" name="made-hitachi" id="filter-hitachi">
+                      <input class="filter-input filter-input-checkbox" type="checkbox" name="made-hitachi" id="filter-hitachi">
                       <label for="filter-hitachi">Hitachi</label>
                     </li>
                   </ul>
@@ -130,11 +130,11 @@
                   <h3>Питание:</h3>
                   <ul>
                     <li>
-                      <input class="filter-input-radio" type="radio" name="power" value="battery" id="filter-battery" checked>
+                      <input class="filter-input filter-input-radio" type="radio" name="power" value="battery" id="filter-battery" checked>
                       <label for="filter-battery">Аккумуляторные</label>
                     </li>
                     <li>
-                      <input class="filter-input-radio" type="radio" name="power" id="filter-socket" value="socket">
+                      <input class="filter-input filter-input-radio" type="radio" name="power" id="filter-socket" value="socket">
                       <label for="filter-socket">Сетевые</label>
                     </li>
                   </ul>
@@ -338,5 +338,22 @@
       </section>
     </footer>
 
+        <!-- Pop-up окно оформить заказ -->
+
+    <section class="pop-up pop-up-cart-add">
+      <button class="close-button close-button-add"></button>
+      <form class="cart-add-form" action="http://echo.htmlacademy.ru" method="post">
+        <div class="cart-add-title">
+          <img src="img/icons/icon-mark.svg" alt="">
+          <p>Товар добавлен в корзину</p>
+        </div>
+        <div class="form-bottom">
+          <button class="button add-order-button" type="submit">Оформить заказ</button>
+          <button class="button resume-buy-button" type="submit">Продолжить покупки</button>
+        </div>
+      </form>
+    </section>
+
+    <script src="js/script.js" type="text/javascript"></script>
   </body>
 </html>
