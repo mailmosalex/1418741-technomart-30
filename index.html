@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" href="img/icons/180.png">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="main-header">
@@ -34,7 +34,7 @@
             </svg>
           </a>
           <form class="top-header-search" action="http://echo.htmlacademy.ru" method="GET">
-            <input type="search" placeholder="Поиск:">
+            <label for="header-input-search"><input type="search" id="header-input-search" placeholder="Поиск:" aria-label="Поиск - введите запрос"></label>
           </form>
           <ul class="top-header-usershop list-reset">
             <li class="top-header-bookmarks"><a href="#">Закладки: 0</a></li>
@@ -49,7 +49,7 @@
           <a class="phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
-        <div>
+        <div class="buttons-user">
           <a href="#" class="btn-user btn-enter">Войти</a>
           <a href="#" class="btn-user">Регистрация</a>
         </div>
@@ -106,8 +106,12 @@
                   <a class="button slider-button" href="catalog.html">Открыть каталог</a>
                 </li>
               </ul>
-              <button class="offer-slider-button offer-slider-left" onclick="minusSlide()"></button>
-              <button class="offer-slider-button offer-slider-right" onclick="plusSlide()"></button>
+              <button class="offer-slider-button offer-slider-left" aria-label="Предыдущий слайд" title="Предыдущий слайд" onclick="minusSlide()"></button>
+              <button class="offer-slider-button offer-slider-right" aria-label="Следующий слайд" title="Следующий слайд" onclick="plusSlide()"></button>
+              <div class="slider-dots">
+                  <span class="slider-dots-item" title="Выбрать слад" onclick="currentSlide(1)"></span>
+                  <span class="slider-dots-item slider-dots-active" title="Выбрать слад" onclick="currentSlide(2)"></span>
+              </div>
             </li>
           </ul>
         </section>
@@ -245,7 +249,7 @@
     <footer class="footer">
       <section class="footer-top container">
         <a class="footer-logo">
-          <img src="img/logo_220x68.jpg" alt="логотип Техномарт">
+          <img src="img/logo_220x68.jpg" width="220" height="68" alt="логотип Техномарт">
         </a>
         <div>
           <ul class="nav-footer-top list-reset">
@@ -277,9 +281,9 @@
           </div>
           <div>
             <ul class="social list-reset">
-              <li><a class="social-vk" href="#"></a></li>
-              <li><a class="social-fb" href="#"></a></li>
-              <li><a class="social-insta" href="#"></a></li>
+              <li><a class="social-vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+              <li><a class="social-fb" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+              <li><a class="social-insta" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
             </ul>
           </div>
           <div>
@@ -301,7 +305,7 @@
   <!-- Pop-up окно формы обратной связи -->
 
     <section class="pop-up pop-up-form">
-      <button class="close-button close-button-form"></button>
+      <button class="close-button close-button-form" title="Закрыть"><span class="visually-hidden">Закрыть</span></button>
       <form class="contact-form" action="http://echo.htmlacademy.ru" method="post">
         <div class="contact-form-wrapper">
           <div class="contact-form-block">
@@ -328,10 +332,10 @@
     <!-- Pop-up окно оформить заказ -->
 
     <section class="pop-up pop-up-cart-add">
-      <button class="close-button close-button-add"></button>
+      <button class="close-button close-button-add" title="Закрыть"><span class="visually-hidden">Закрыть</span></button>
       <form class="cart-add-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="cart-add-title">
-          <img src="img/icons/icon-mark.svg" alt="">
+          <img src="img/icons/icon-mark.svg" width="66" height="66" alt="Выполнено">
           <p>Товар добавлен в корзину</p>
         </div>
         <div class="form-bottom">
@@ -345,10 +349,10 @@
   <!-- Pop-up окно карты -->
 
     <section class="pop-up pop-up-map">
-      <button class="close-button close-button-map" title="Закрыть"></button>
+      <button class="close-button close-button-map" title="Закрыть"><span class="visually-hidden">Закрыть</span></button>
       <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.249385992339!2d30.321431057535726!3d59.93836960626309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1611605041432!5m2!1sru!2sru" width="943" height="449"></iframe>
     </section>
 
-    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/script.min.js" type="text/javascript"></script>
   </body>
 </html>

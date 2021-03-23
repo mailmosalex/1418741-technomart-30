@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" href="img/icons/180.png">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="main-header">
@@ -34,7 +34,7 @@
             </svg>
           </a>
           <form class="top-header-search" action="http://echo.htmlacademy.ru" method="GET">
-            <input type="search" placeholder="Поиск:">
+            <label for="header-input-search"><input type="search" id="header-input-search" placeholder="Поиск:" aria-label="Поиск - введите запрос"></label>
           </form>
           <ul class="top-header-usershop list-reset">
             <li class="top-header-bookmarks"><a href="#">Закладки: 0</a></li>
@@ -73,7 +73,7 @@
     <main class="main-catalog">
       <div class="container">
         <ul class="breadcrumbs button-catalog list-reset">
-          <li><a href="index.html"><img src="img/icons/icon-home.svg" alt="Главная" width="14" height="12"></a></li>
+          <li><a href="index.html" title="Перейти на главную страницу"><img src="img/icons/icon-home.svg" alt="Главная страница" width="14" height="12"></a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Инструмент</a></li>
           <li><a>Перфораторы</a></li>
@@ -96,9 +96,9 @@
                     </div>
                   </div>
                   <div class="filter-cost-row">
-                    <input class="filter-background" type="text" value="0">
+                    <label for="filter-mincost-input"><input class="filter-background" type="text" id="filter-mincost-input" value="0"></label>
                     <span>—</span>
-                    <input class="filter-background"  type="text" value="30000">
+                    <label for="filter-maxcost-input"></label><input class="filter-background"  type="text" id="filter-maxcost-input" value="30000">
                   </div>
                 </li>
                 <li class="filter-products">
@@ -150,8 +150,9 @@
               <li><a href="#">По типу</a></li>
               <li><a href="#">По функционалу</a></li>
               <li>
-                <a class="sorting-button filter-background" href="#"></a>
-                <a class="sorting-button sorting-button-down filter-background" href="#"></a>
+                <a class="sorting-button filter-background" href="#" title="По возрастанию"><span class="visually-hidden">По
+                  возрастанию</span></a>
+                <a class="sorting-button sorting-button-down filter-background" href="#" title="По убыванию"><span class="visually-hidden">По убыванию</span></a>
               </li>
             </ul>
             <ul class="products-shop products-shop-table list-reset">
@@ -285,7 +286,7 @@
     <footer class="footer">
       <section class="footer-top container">
         <a class="footer-logo" href="index.html">
-          <img src="img/logo_220x68.jpg" alt="логотип Техномарт">
+          <img src="img/logo_220x68.jpg" width="220" height="68" alt="логотип Техномарт">
         </a>
         <div>
           <ul class="nav-footer-top list-reset">
@@ -317,9 +318,9 @@
           </div>
           <div>
             <ul class="social list-reset">
-              <li><a class="social-vk" href="#"></a></li>
-              <li><a class="social-fb" href="#"></a></li>
-              <li><a class="social-insta" href="#"></a></li>
+              <li><a class="social-vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+              <li><a class="social-fb" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+              <li><a class="social-insta" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
             </ul>
           </div>
           <div>
@@ -341,10 +342,10 @@
         <!-- Pop-up окно оформить заказ -->
 
     <section class="pop-up pop-up-cart-add">
-      <button class="close-button close-button-add"></button>
+      <button class="close-button close-button-add" title="Закрыть"><span class="visually-hidden">Закрыть</span></button>ы
       <form class="cart-add-form" action="http://echo.htmlacademy.ru" method="post">
         <div class="cart-add-title">
-          <img src="img/icons/icon-mark.svg" alt="">
+          <img src="img/icons/icon-mark.svg" width="66" height="66" alt="Выполнено">
           <p>Товар добавлен в корзину</p>
         </div>
         <div class="form-bottom">
@@ -354,6 +355,6 @@
       </form>
     </section>
 
-    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/script.min.js" type="text/javascript"></script>
   </body>
 </html>
